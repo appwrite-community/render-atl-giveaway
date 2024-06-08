@@ -75,12 +75,12 @@
 				heading = `${props.items.length} people are registered!`;
 				removeWheel();
 				createWheel();
-		}
-	);
+			}
+		);
 	}
 
 	onMount(() => {
-		if(unsubscribe === null) {
+		if (unsubscribe === null) {
 			unsubscribe = subscribe();
 		}
 		wheelContainer = document.querySelector('.wheel-container');

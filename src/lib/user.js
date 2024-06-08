@@ -16,10 +16,10 @@ export const user = {
 	},
 
 	session: async () => {
-        try {
-            return await account.getSession('current');
-        } catch(err) {
-            return null;
-        }
-    }
+		try {
+			return await account.getSession('current');
+		} catch (err) {
+			return null;
+		}
+	}
 };

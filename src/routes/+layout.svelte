@@ -27,5 +27,4 @@
 		opacity: 0.6;
 		z-index: -1;
 	}
-
 </style>
