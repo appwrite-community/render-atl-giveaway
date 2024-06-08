@@ -15,11 +15,11 @@
 
 		<img
 			src="/giveaway.png"
-			alt="Plain black T-shirt with the text Init and a keyboard branded with the Appwrite logo on the Escape key"
+			alt="A keyboard branded with the Appwrite logo on the Escape key"
 		/>
 
 		<p class="heading-level-6 u-margin-32">
-			Login with GitHub and get a chance to win some amazing gifts!
+			Login with GitHub and get a chance to win an Appwriter keyboard!
 		</p>
 
 		<button class="button is-big u-margin-32" on:click={login}>
