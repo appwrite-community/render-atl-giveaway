@@ -5,24 +5,25 @@ import { COLLECTION_NAME, DATABASE_NAME } from './constants';
 
 export const db = {
 	list: async () => {
-		var entries = await database.listDocuments(DATABASE_NAME, COLLECTION_NAME, [
+		let entries = await database.listDocuments(DATABASE_NAME, COLLECTION_NAME, [
 			Query.limit(500),
-			Query.select(['discordName'])
+			Query.select(['username'])
 		]);
 
-		var options = [];
+		let options = [];
 
 		entries.documents.forEach((entry) => {
-			options.push({ label: entry.discordName });
+			options.push({ label: entry.username });
 		});
 
 		return { options: options, total: entries.total };
 	},
 
-	add: async (discordName, email) => {
+	add: async (name, username, email) => {
 		try {
 			await database.createDocument(DATABASE_NAME, COLLECTION_NAME, ID.unique(), {
-				discordName: discordName,
+				name: name,
+				username: username,
 				email: email
 			});
 			console.log('Added to the raffle');

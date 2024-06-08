@@ -1,20 +1,8 @@
 <script>
-	import { user } from '$lib/user';
-	import { db } from '$lib/database';
-	import { onMount } from 'svelte';
 	import NavBar from '../../components/NavBar.svelte';
 
-	let userId = '';
-
-	async function getUserId() {
-		var currentUser = await user.get();
-		await db.add(currentUser.name, currentUser.email);
-		userId = currentUser.name;
-	}
-
-	onMount(() => {
-		getUserId();
-	});
+	export let data;
+	let userId = data.userId;
 </script>
 
 <NavBar />

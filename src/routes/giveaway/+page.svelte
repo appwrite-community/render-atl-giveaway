@@ -12,25 +12,25 @@
 
 	let wheel = null;
 
-	var wheelContainer = null;
+	let wheelContainer = null;
 
-	var props = {
+	let props = {
 		items: data.entries,
 		itemLabelRadiusMax: 0.5
 	};
 
 	let heading = `${props.items.length} people are registered!`;
 
-	var unsubscribe = null;
+	let unsubscribe = null;
 
 	async function spin() {
 		unsubscribe();
-		var winningIndex = Math.floor(Math.random() * props.items.length);
-		var duration = 5000;
-		var spinToCenter = false;
-		var numberOfRevolutions = 5;
-		var direction = 1;
-		var easingFunction = easing.easeOutCubic;
+		let winningIndex = Math.floor(Math.random() * props.items.length);
+		let duration = 5000;
+		let spinToCenter = false;
+		let numberOfRevolutions = 5;
+		let direction = 1;
+		let easingFunction = easing.easeOutCubic;
 
 		wheel.spinToItem(
 			winningIndex,
@@ -42,7 +42,7 @@
 		);
 
 		wheel.onRest = (e) => {
-			var winner = props.items[wheel.getCurrentIndex()].label;
+			let winner = props.items[wheel.getCurrentIndex()].label;
 			heading = `Congratulations to the winner: ${winner}!`;
 		};
 	}
@@ -71,7 +71,7 @@
 			`databases.${DATABASE_NAME}.collections.${COLLECTION_NAME}.documents`,
 			(response) => {
 				console.log(response);
-				props.items.push({ label: response.payload.discordName });
+				props.items.push({ label: response.payload.username });
 				heading = `${props.items.length} people are registered!`;
 				removeWheel();
 				createWheel();
@@ -98,7 +98,6 @@
 
 <style>
 	section {
-		height: 90vh;
 		width: 100vw;
 		margin: auto;
 		align-items: center;

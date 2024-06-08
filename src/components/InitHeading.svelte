@@ -3,7 +3,7 @@
 </script>
 
 <div class="card">
-	<img src="/init.svg" width="100px" alt="Init logo" />
+	<img src="/renderatl-logo.png" alt="RenderATL logo" />
 	<h1 class="heading-level-1 u-margin-block-start-auto u-normal">{heading}</h1>
 </div>
 
@@ -13,5 +13,9 @@
 		background-color: transparent;
 		border: 0;
 		text-align: center;
+	}
+
+	img {
+		width: 125px;
 	}
 </style>
