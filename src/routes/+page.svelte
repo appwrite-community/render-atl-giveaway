@@ -10,7 +10,7 @@
 
 <NavBar />
 <section id="giveaway" class="u-flex-vertical">
-	<div class="container u-flex-vertical">
+	<div class="container u-flex-vertical giveawayContainer">
 		<PageHeading heading="Giveaway" />
 
 		<img
@@ -40,7 +40,7 @@
 		justify-content: center;
 	}
 
-	div {
+	.giveawayContainer {
 		align-self: center;
 		padding: 2rem;
 	}
@@ -67,5 +67,8 @@
 			margin: 1.5rem auto;
 		}
 
+		.giveawayContainer {
+			padding: 0.5rem;
+		}
 	}
 </style>
