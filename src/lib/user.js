@@ -6,7 +6,7 @@ export const user = {
 	login: async () => {
 		account.createOAuth2Session(
 			OAuthProvider.Github,
-			`https://${window.location.hostname}/success`,
+			`http://localhost:5173/success`,
 			`https://${window.location.hostname}/failure`
 		);
 	},
